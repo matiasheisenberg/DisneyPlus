@@ -1,83 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/disney-282116.png">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./style.css" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Disney+ Curiosidades</title>
-  </head>
-  <body>
-    <section class="app">
-      <header>
-        <h1 id="h1"></h1>
-      </header>
-      <button class="boton-especial-sonido" id="boton-especial-sonido">
-        <img class="volume"></img>
-      </button>
-      <button class="boton-especial-skip" id="boton-especial-skip">
-        <a>SALTAR INTRO</a>
-      </button>
-      <a class="boton-secreto" href="https://www.disneyplus.com/es-ar" target="_blank"></a>
-      <video id="video" src="./Walt Disney Pictures - Intro_Logo_ New Version (2016) _ 4K UHD 2160p 60fps.mp4"  style="display: none;" autoplay muted></video> 
-      <video id="video-walle" src="./comingsoon.mov"  style="display: none;"></video>
-      <video id="video-toy-story" src="./video disney toy story.mp4"  style="display: none;"></video>
-      <video id="video-mandalorian" src="./themandalorian.mp4"  style="display: none;"></video>
-      <video id="video-avengers" src="./marvel.mp4"  style="display: none;"></video>
-      <video id="video-zorro" src="./comingsoon.mov"  style="display: none;"></video>
-      <video id="video-rey-leon" src="./comingsoon.mov"  style="display: none;"></video>
-      <video id="video-natgeo" src="./comingsoon.mov"  style="display: none;"></video>
-      <audio class="av" id="av" src="./sounds/avengers.mp3" ></audio>
-      <div class="visual"></div>
-      <div class="pads" id="padfather">
-        <div class="pad1" id="walle">
-          <button class="button" id="boton-pelicula"><i class="fa fa-play-circle" style="font-size:30px;"></i></button>
-          <audio class="sound">
-            <source src="./sounds/walle.mp3" />
-          </audio>
-        </div>
-        <div class="pad2" id="toy-story">
-          <button class="button" id="boton-pelicula"><i class="fa fa-play-circle" style="font-size:30px;"></i></button>
-          <audio class="sound">
-            <source src="./sounds/toy-story.mp3" />
-          </audio>
-        </div>
-        <div class="pad3" id="mandalorian">
-          <button class="button" id="boton-pelicula"><i class="fa fa-play-circle" style="font-size:30px;"></i></button>
-          <audio class="sound">
-            <source src="./sounds/star-wars.mp3" />
-          </audio>
-        </div>
-        <div class="pad4" id="avengers">
-          <button class="button" id="boton-pelicula"><i class="fa fa-play-circle" style="font-size:30px;"></i></button>
-          <audio class="sound">
-            <source src="./sounds/avengers.mp3" />
-          </audio>
-        </div>
-        <div class="pad5" id="zorro">
-          <button class="button" id="boton-pelicula"><i class="fa fa-play-circle" style="font-size:30px;"></i></button>
-          <audio class="sound">
-            <source src="./sounds/zorro.mp3" />
-          </audio>
-        </div>
-        <div class="pad6" id="rey-leon">
-          <button class="button" id="boton-pelicula"><i class="fa fa-play-circle" style="font-size:30px;"></i></button>
-          <audio class="sound">
-            <source src="./sounds/rey-leon.mp3" />
-          </audio>
-        </div>
-        <div class="pad7" id="natgeo">
-          <button class="button" id="boton-pelicula"><i class="fa fa-play-circle" style="font-size:30px;"></i></button>
-          <audio class="sound">
-            <source src="./sounds/tiger-roar-sound-effect.mp3" />
-          </audio>
-        </div>
-      </div>
-    </section>
 
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/disney-282116.png">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Disney+ Botonera</title>
+</head>
+
+<body>
+  <section class="app">
+    <header>
+      <h1 id="h1"></h1>
+    </header>
+    <button class="boton-especial-sonido" id="boton-especial-sonido">
+      <img class="volume"></img>
+    </button>
+    <button class="boton-especial-skip" id="boton-especial-skip">
+      <a>SALTAR INTRO</a>
+    </button>
+    <a class="boton-secreto" href="https://www.disneyplus.com/es-ar" target="_blank"></a>
+    <video id="video" src="./videos/Walt Disney Pictures - Intro_Logo_ New Version (2016) _ 4K UHD 2160p 60fps.mp4"
+      style="display: none;" autoplay muted></video>
+    <video id="video2" src="./videos/logointro.mp4" style="display: none;" autoplay muted></video>
+
+    <div class="visual"></div>
+
+    <div class="peliculas-recomendadas contenedor">
+      <div class="contenedor-titulo-controles">
+        <div class="indicadores" style="margin-left: 15px;"></div>
+      </div>
+
+      <div class="contenedor-principal">
+        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><img
+            src="./iconos/Angle_left_font_awesome.svg.png" width="50" height="60"></button>
+
+        <div class="contenedor-carousel">
+          <div class="carousel">
+            <div class="pelicula" id="walle">
+              <a href="#"><img src="./portadas/WallE-POrtada.jpg" alt=""></a>
+              <audio class="sound">
+                <source src="./sounds/walle.mp3" />
+              </audio>
+            </div>
+            <div class="pelicula" id="toy-story">
+              <a href="#"><img src="./portadas/toy-story.jpg" alt=""></a>
+              <audio class="sound">
+                <source src="./sounds/toy-story.mp3" />
+              </audio>
+            </div>
+            <div class="pelicula" id="mandalorian">
+              <a href="#"><img src="./portadas/star-wars.jpg" alt=""></a>
+              <audio class="sound">
+                <source src="./sounds/star-wars.mp3" />
+              </audio>
+            </div>
+            <div class="pelicula" id="avengers">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+              <audio class="sound">
+                <source src="./sounds/avengers.mp3" />
+              </audio>
+            </div>
+            <div class="pelicula" id="zorro">
+              <a href="#"><img src="./portadas/zorro.jpg" alt=""></a>
+              <audio class="sound">
+                <source src="./sounds/zorro.mp3" />
+              </audio>
+            </div>
+            <div class="pelicula" id="rey-leon">
+              <a href="#"><img src="./portadas/rey-leon.jpg" alt=""></a>
+              <audio class="sound">
+                <source src="./sounds/rey-leon.mp3" />
+              </audio>
+            </div>
+            <div class="pelicula" id="natgeo">
+              <a href="#"><img src="./portadas/natgeo.jpg" alt=""></a>
+              <audio class="sound">
+                <source src="./sounds/tiger-roar-sound-effect.mp3" />
+              </audio>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+            <div class="pelicula">
+              <a href="#"><img src="./portadas/end-game.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+
+        <button role="button" id="flecha-derecha" class="flecha-derecha"><img
+            src="./iconos/Angle_right_font_awesome.svg.png" width="50" height="60"></button>
+      </div>
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
