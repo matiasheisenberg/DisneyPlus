@@ -9,12 +9,10 @@ function mostrarVideo(){
   video.style.height = '100%';
   video.style.width = '100%';
   video.style.zIndex = '1';
-  pad.style.display = 'none';
     video.onended = function(e) {
         video.style.display = 'none';
         btn.style.display = 'none';
         skip.style.display = 'none';
-        pad.style.display = 'flex';
       };
 }
 
