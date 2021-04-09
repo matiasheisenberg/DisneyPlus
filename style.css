@@ -8,7 +8,7 @@ body {
   font-family: "Raleway", sans-serif;
   /*background-color: rgb(31, 62, 134);*/
   background-image: radial-gradient(60% 40% at center,  rgb(33, 62, 138),rgb(7, 18, 49), rgb(4, 11, 40));
-  background-image: url("./disney-plus-logo.jpg");
+  background-image: url("./portadas/disney-plus-logo.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,16 +17,6 @@ body {
 img{
   border: none;
 }
-
-/*#walle{
-  display: flex ;
-  height: 100%;
-  width: 100%;
-}
-#walle:hover{
-  display: none !important;
-
-}*/
 
 .button{
 padding: 10px;
@@ -48,7 +38,7 @@ outline:none;
   outline:none;
   z-index: 4;
   position: fixed;
-  background-image: url(./volume-mute-outline.svg); 
+  background-image: url(./iconos/volume-mute-outline.svg); 
   background-repeat: no-repeat;
   background-size: 40px 40px;
   background-position: center;
@@ -70,7 +60,7 @@ outline:none;
     background-repeat: no-repeat;
     background-size: 40px 40px;
     background-position: center;
-    border-radius: 0%;
+    border-radius: 15%;
     }
 
   .boton-secreto{
@@ -112,18 +102,7 @@ header p {
   font-size: 55px;
 }
 
-.pads {
-  background: lightblue;
-  width: 100%;
-  display: flex;
-  cursor: pointer;
-}
-
-.pads > div {
-  height: 120px;
-  width: 100px;
-  flex: 1;
-}
+/*
 .pad1 {
   background-image: url(./WallE-POrtada.jpg);
   background-size: cover;
@@ -167,7 +146,7 @@ header p {
   background-position: top;
   background-repeat: no-repeat;
 }
-
+*/
 .visual > div {
   position: absolute;
   bottom: 0%;
@@ -182,12 +161,12 @@ header p {
 
 @keyframes jump0 {
   0% {
-    bottom: 0%;
+    bottom: 10%;
     left: 0%;
   }
   50% {
-    bottom: 50%;
-    left: 50%;
+    bottom: 75%;
+    left: 48%;
   }
 
   100% {
@@ -198,12 +177,12 @@ header p {
 
 @keyframes jump1 {
   0% {
-    bottom: 0%;
-    left: 17%;
+    bottom: 10%;
+    left: 23%;
   }
   50% {
-    bottom: 50%;
-    left: 50%;
+    bottom: 75%;
+    left: 60%;
   }
 
   100% {
@@ -214,12 +193,12 @@ header p {
 
 @keyframes jump2 {
   0% {
-    bottom: 0%;
-    left: 32%;
+    bottom: 10%;
+    left: 49%;
   }
   50% {
-    bottom: 50%;
-    left: 50%;
+    bottom: 75%;
+    left: 70%;
   }
 
   100% {
@@ -230,12 +209,12 @@ header p {
 
 @keyframes jump3 {
   0% {
-    bottom: 0%;
-    left: 48%;
+    bottom: 10%;
+    left: 68%;
   }
   50% {
-    bottom: 50%;
-    left: 70%;
+    bottom: 75%;
+    left: 80%;
   }
 
   100% {
@@ -246,11 +225,231 @@ header p {
 
 @keyframes jump4 {
   0% {
-    bottom: 0%;
-    left: 65%;
+    bottom: 10%;
+    left: 90%;
   }
   50% {
-    bottom: 50%;
+    bottom: 75%;
+    left: 90%;
+  }
+
+  100% {
+    bottom: 40%;
+    left: 100%;
+  }
+} 
+  @keyframes jump5 {
+    0% {
+      bottom: 10%;
+      left: 0%;
+    }
+    50% {
+      bottom: 75%;
+      left: 48%;
+    }
+  
+    100% {
+      bottom: 40%;
+      left: 100%;
+    }
+  }
+  
+  @keyframes jump6 {
+    0% {
+      bottom: 10%;
+      left: 23%;
+    }
+    50% {
+      bottom: 75%;
+      left: 60%;
+    }
+  
+    100% {
+      bottom: 40%;
+      left: 100%;
+    }
+  }
+  
+  @keyframes jump7 {
+    0% {
+      bottom: 10%;
+      left: 49%;
+    }
+    50% {
+      bottom: 75%;
+      left: 70%;
+    }
+  
+    100% {
+      bottom: 40%;
+      left: 100%;
+    }
+  }
+  
+  @keyframes jump8 {
+    0% {
+      bottom: 10%;
+      left: 68%;
+    }
+    50% {
+      bottom: 75%;
+      left: 80%;
+    }
+  
+    100% {
+      bottom: 40%;
+      left: 100%;
+    }
+  }
+  
+  @keyframes jump9 {
+    0% {
+      bottom: 10%;
+      left: 90%;
+    }
+    50% {
+      bottom: 75%;
+      left: 90%;
+    }
+  
+    100% {
+      bottom: 40%;
+      left: 100%;
+    }
+  }
+    @keyframes jump10 {
+      0% {
+        bottom: 10%;
+        left: 0%;
+      }
+      50% {
+        bottom: 75%;
+        left: 48%;
+      }
+    
+      100% {
+        bottom: 40%;
+        left: 100%;
+      }}
+    
+    @keyframes jump11 {
+      0% {
+        bottom: 10%;
+        left: 23%;
+      }
+      50% {
+        bottom: 75%;
+        left: 60%;
+      }
+    
+      100% {
+        bottom: 40%;
+        left: 100%;
+      }
+    }
+    
+    @keyframes jump12 {
+      0% {
+        bottom: 10%;
+        left: 49%;
+      }
+      50% {
+        bottom: 75%;
+        left: 70%;
+      }
+    
+      100% {
+        bottom: 40%;
+        left: 100%;
+      }
+    }
+    
+    @keyframes jump13 {
+      0% {
+        bottom: 10%;
+        left: 68%;
+      }
+      50% {
+        bottom: 75%;
+        left: 80%;
+      }
+    
+      100% {
+        bottom: 40%;
+        left: 100%;
+      }
+    }
+    
+    @keyframes jump14 {
+      0% {
+        bottom: 10%;
+        left: 90%;
+      }
+      50% {
+        bottom: 75%;
+        left: 90%;
+      }
+    
+      100% {
+        bottom: 40%;
+        left: 100%;
+      }
+}
+@keyframes jump15 {
+  0% {
+    bottom: 10%;
+    left: 0%;
+  }
+  50% {
+    bottom: 75%;
+    left: 48%;
+  }
+
+  100% {
+    bottom: 40%;
+    left: 100%;
+  }
+}
+
+@keyframes jump16 {
+  0% {
+    bottom: 10%;
+    left: 23%;
+  }
+  50% {
+    bottom: 75%;
+    left: 60%;
+  }
+
+  100% {
+    bottom: 40%;
+    left: 100%;
+  }
+}
+
+@keyframes jump17 {
+  0% {
+    bottom: 10%;
+    left: 49%;
+  }
+  50% {
+    bottom: 75%;
+    left: 70%;
+  }
+
+  100% {
+    bottom: 40%;
+    left: 100%;
+  }
+}
+
+@keyframes jump18 {
+  0% {
+    bottom: 10%;
+    left: 68%;
+  }
+  50% {
+    bottom: 75%;
     left: 80%;
   }
 
@@ -260,33 +459,116 @@ header p {
   }
 }
 
-@keyframes jump5 {
+@keyframes jump19 {
   0% {
-    bottom: 0%;
-    left: 78%;
+    bottom: 10%;
+    left: 90%;
   }
   50% {
-    bottom: 50%;
-    left: 85%;
+    bottom: 75%;
+    left: 90%;
   }
 
   100% {
     bottom: 40%;
     left: 100%;
   }
+} 
+
+/*extra*/
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
 }
-  @keyframes jump6 {
-    0% {
-      bottom: 0%;
-      left: 93%;
-    }
-    50% {
-      bottom: 50%;
-      left: 95%;
-    }
-  
-    100% {
-      bottom: 40%;
-      left: 100%;
-    }
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 5px;
+	width: 20px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: rgb(24, 175, 180);
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.peliculas-recomendadas {
+	margin-bottom: 0px;
+}
+
+.peliculas-recomendadas .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.peliculas-recomendadas .contenedor-carousel {
+	width: 100%;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula{
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
+	width: 100%;
+  height: 100%;
+	vertical-align: top;
 }

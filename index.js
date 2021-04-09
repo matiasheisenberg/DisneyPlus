@@ -4,7 +4,7 @@ function mostrarVideo(){
   let video = document.querySelector('video');
   let btn = document.getElementById('boton-especial-sonido');
   let skip = document.getElementById('boton-especial-skip');
-  let pad = document.getElementById('padfather');
+  let pad = document.getElementById('catalogo');
   video.style.display = 'flex';
   video.style.height = '100%';
   video.style.width = '100%';
@@ -19,8 +19,8 @@ function mostrarVideo(){
 }
 
 const volume = [
-  "url('./volume-mute-outline.svg')",
-  "url('./volume-high-outline.svg')"
+  "url('./iconos/volume-mute-outline.svg')",
+  "url('./iconos/volume-high-outline.svg')"
 ];
 let video = document.querySelector('video');
 let btn = document.getElementById('boton-especial-sonido');
@@ -48,50 +48,21 @@ skip.addEventListener('click', ()=>{
 
 window.addEventListener("load", () => {
   const sounds = document.querySelectorAll(".sound");
-  const pads = document.querySelectorAll(".pads div");
-  const botonPelis = document.querySelectorAll("#boton-pelicula");
+  const pads = document.querySelectorAll(".carousel div");
   const visual = document.querySelector(".visual");
   const ball = [
-    "url('./walle-bubble.png')",
-    "url('./toy-story-ball.png')",
-    "url('./estrella.jpg')",
-    "url('./stark.jpg')",
-    "url('./z-zorro.jpg')",
-    "url('./simba.jpg')",
-    "url('./planeta.jpg')"
+    "url('./balls/walle-bubble.png')",
+    "url('./balls/toy-story-ball.png')",
+    "url('./balls/estrella.jpg')",
+    "url('./balls/stark.jpg')",
+    "url('./balls/z-zorro.jpg')",
+    "url('./balls/simba.jpg')",
+    "url('./balls/planeta.jpg')"
   ];
 
-  const videos = [
-    document.getElementById('video-walle'),
-    document.getElementById('video-toy-story'),
-    document.getElementById('video-mandalorian'),
-    document.getElementById('video-avengers'),
-    document.getElementById('video-zorro'),
-    document.getElementById('video-rey-leon'),
-    document.getElementById('video-natgeo')
-
-  ]
-
-//videos de pads
-  botonPelis.forEach((btn, index) =>{
-    btn.addEventListener('click', ()=>{
-      if(videos[index].style.display==='none'){
-        videos[index].style.display = 'flex';
-        videos[index].style.height = '100%';
-        videos[index].style.width = '100%';
-        videos[index].style.zIndex = '1';
-        videos[index].play();
-        videos[index].onended = function(e) {
-          videos[index].style.display = 'none';
-        };
-      }else{
-        videos[index].style.display = 'none';
-        videos[index].pause();
-        videos[index].currentTime = 0;
-    }
-    })
-    })
   
+
+
   
  //objetos
   pads.forEach((pad, index) => {
@@ -265,3 +236,66 @@ launch();
 setInterval('stepthrough()', speed);
 }}
 //]]>
+
+
+//extra
+const fila = document.querySelector('.contenedor-carousel');
+const peliculas = document.querySelectorAll('.pelicula');
+
+const flechaIzquierda = document.getElementById('flecha-izquierda');
+const flechaDerecha = document.getElementById('flecha-derecha');
+
+// ? ----- ----- Event Listener para la flecha derecha. ----- -----
+flechaDerecha.addEventListener('click', () => {
+	fila.scrollLeft += fila.offsetWidth;
+
+	const indicadorActivo = document.querySelector('.indicadores .activo');
+	if(indicadorActivo.nextSibling){
+		indicadorActivo.nextSibling.classList.add('activo');
+		indicadorActivo.classList.remove('activo');
+	}
+});
+
+// ? ----- ----- Event Listener para la flecha izquierda. ----- -----
+flechaIzquierda.addEventListener('click', () => {
+	fila.scrollLeft -= fila.offsetWidth;
+
+	const indicadorActivo = document.querySelector('.indicadores .activo');
+	if(indicadorActivo.previousSibling){
+		indicadorActivo.previousSibling.classList.add('activo');
+		indicadorActivo.classList.remove('activo');
+	}
+});
+
+// ? ----- ----- Paginacion ----- -----
+const numeroPaginas = Math.ceil(peliculas.length / 5);
+for(let i = 0; i < numeroPaginas; i++){
+	const indicador = document.createElement('button');
+
+	if(i === 0){
+		indicador.classList.add('activo');
+	}
+
+	document.querySelector('.indicadores').appendChild(indicador);
+	indicador.addEventListener('click', (e) => {
+		fila.scrollLeft = i * fila.offsetWidth;
+
+		document.querySelector('.indicadores .activo').classList.remove('activo');
+		e.target.classList.add('activo');
+	});
+}
+
+// ? ----- ----- Hover ----- -----
+peliculas.forEach((pelicula) => {
+	pelicula.addEventListener('mouseenter', (e) => {
+		const elemento = e.currentTarget;
+		setTimeout(() => {
+			peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
+			elemento.classList.add('hover');
+		}, 300);
+	});
+});
+
+fila.addEventListener('mouseleave', () => {
+	peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
+});
