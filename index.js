@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
     "url('./balls/stark.jpg')",
     "url('./balls/z-zorro.jpg')",
     "url('./balls/simba.jpg')",
-    "url('./balls/planeta.jpg')",
+    "url('./balls/Planeta.jpg')",
     "url('./balls/cars.jpg')",
     "url('./balls/simpsons.jpeg')",
     "url('./balls/monster.jpeg')"
