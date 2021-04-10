@@ -3,18 +3,20 @@ document.addEventListener("DOMContentLoaded",mostrarVideo);
 function mostrarVideo(){
   let video = document.querySelector('video');
   let btn = document.getElementById('boton-especial-sonido');
-  let skip = document.getElementById('boton-especial-skip');
+  //let skip = document.getElementById('boton-especial-skip');
   let pad = document.getElementById('catalogo');
   video.style.display = 'flex';
   video.style.height = '100%';
   video.style.width = '100%';
   video.style.zIndex = '1';
-    video.onended = function(e) {
+
+  pad.style.display = 'none';
+  video.onended = function(e) {
         video.style.display = 'none';
         btn.style.display = 'none';
-        skip.style.display = 'none';
-      };
-}
+        //skip.style.display = 'none';
+        pad.style.display = 'block';
+  };
 
 const volume = [
   "url('./iconos/volume-mute-outline.svg')",
@@ -32,13 +34,14 @@ btn.addEventListener('click', ()=>{
     btn.style.backgroundImage = volume[0];
   }
 })
+/*
 skip.addEventListener('click', ()=>{
-  video.currentTime = 33;
+  video.currentTime = 5;
         video.style.display = 'none';
         btn.style.display = 'none';
         skip.style.display = 'none';
         pad.style.display = 'flex';
-})
+})*/
 
 
 
@@ -47,6 +50,7 @@ skip.addEventListener('click', ()=>{
 window.addEventListener("load", () => {
   const sounds = document.querySelectorAll(".sound");
   const pads = document.querySelectorAll(".carousel div");
+  let body = document.querySelector('body');
   const visual = document.querySelector(".visual");
   const ball = [
     "url('./balls/walle-bubble.png')",
@@ -55,8 +59,24 @@ window.addEventListener("load", () => {
     "url('./balls/stark.jpg')",
     "url('./balls/z-zorro.jpg')",
     "url('./balls/simba.jpg')",
-    "url('./balls/planeta.jpg')"
+    "url('./balls/planeta.jpg')",
+    "url('./balls/cars.jpg')",
+    "url('./balls/simpsons.jpeg')",
+    "url('./balls/monster.jpeg')"
   ];
+
+  const fondos = [
+    "url('./fondos/walle-estrellas.jpeg')",
+    "url('./fondos/Toy-Story-4.jpeg')",
+    "url('./fondos/the-mandalorian.jpeg')",
+    "url('./fondos/end-game.png')",
+    "url('./fondos/zorro.jpeg')",
+    "url('./fondos/rey-leon.jpeg')",
+    "url('./fondos/nat-geo.jpeg')",
+    "url('./fondos/cars.jpeg')",
+    "url('./fondos/simp.jpeg')",
+    "url('./fondos/monsters.jpeg')",
+  ]
 
   
 
@@ -66,6 +86,9 @@ window.addEventListener("load", () => {
   pads.forEach((pad, index) => {
     pad.addEventListener("click", function() {
       sounds[index].currentTime = 0;
+      body.style.backgroundImage = fondos[index];
+      body.style.backgroundSize = 'cover';
+      body.style.transition = '1.5s';
       sounds[index].play();
       createBubble(index);
     });
@@ -81,6 +104,11 @@ window.addEventListener("load", () => {
     bubble.style.animation = `jump${index} 4s ease`;
     bubble.addEventListener("animationend", function() {
       visual.removeChild(this);
+      body.style.backgroundImage = "url('./portadas/disney-plus-logo.jpg')";
+      body.style.backgroundSize = '100% 100%';
+      body.style.position = 'center';
+      body.style.repeat = 'no-repeat';
+      body.style.objectFit = 'cover';
     });
   };
 });
@@ -91,7 +119,7 @@ window.addEventListener("load", () => {
 //<![CDATA[
 var bits=500; // cuantos bits
 var intensity=10; // que tan "poderosa" es la explosión. (recomendado entre 3 y 10)
-var speed=8; // rapidez (a menor numero, mas rapido)
+var speed=5; // rapidez (a menor numero, mas rapido)
 var colours=new Array("#03f", "#f03", "#0e0", "#93f", "#0cc", "#f93");
 //azul rojo verde purpura cyan, naranjo
 
