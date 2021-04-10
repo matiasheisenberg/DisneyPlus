@@ -9,6 +9,7 @@ function mostrarVideo(){
   video.style.height = '100%';
   video.style.width = '100%';
   video.style.zIndex = '1';
+
   pad.style.display = 'none';
   video.onended = function(e) {
         video.style.display = 'none';
@@ -16,7 +17,6 @@ function mostrarVideo(){
         //skip.style.display = 'none';
         pad.style.display = 'block';
   };
-}
 
 const volume = [
   "url('./iconos/volume-mute-outline.svg')",
