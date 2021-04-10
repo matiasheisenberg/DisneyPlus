@@ -22,9 +22,6 @@ const volume = [
   "url('./iconos/volume-mute-outline.svg')",
   "url('./iconos/volume-high-outline.svg')"
 ];
-let video = document.querySelector('video');
-let btn = document.getElementById('boton-especial-sonido');
-let skip = document.getElementById('boton-especial-skip');
 btn.addEventListener('click', ()=>{
   if(video.muted){
   video.muted = false;
